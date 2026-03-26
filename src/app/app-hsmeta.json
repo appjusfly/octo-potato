@@ -1,0 +1,21 @@
+{
+  "uid": "octo_potato",
+  "type": "app",
+  "config": {
+    "name": "octo-potato",
+    "description": "octo-potato HubSpot app",
+    "logo": "/app/app-logo.png",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": [
+        "https://YOUR_BACKEND/oauth/hubspot/callback"
+      ],
+      "requiredScopes": [
+        "crm.objects.contacts.read"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    }
+  }
+}
