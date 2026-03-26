@@ -1,0 +1,53 @@
+{
+  "name": "onboarding_milestone",
+  "labels": {
+    "singular": "Onboarding Milestone",
+    "plural": "Onboarding Milestones"
+  },
+  "primaryDisplayProperty": "milestone_name",
+  "requiredProperties": [
+    "milestone_name"
+  ],
+  "searchableProperties": [
+    "milestone_name",
+    "milestone_status"
+  ],
+  "properties": [
+    {
+      "name": "milestone_name",
+      "label": "Milestone Name",
+      "type": "string",
+      "fieldType": "text",
+      "hasUniqueValue": false,
+      "hidden": false,
+      "displayOrder": 1,
+      "description": "The name of the onboarding milestone"
+    },
+    {
+      "name": "milestone_status",
+      "label": "Status",
+      "type": "enumeration",
+      "fieldType": "select",
+      "hasUniqueValue": false,
+      "hidden": false,
+      "displayOrder": 2,
+      "description": "Current status of the milestone",
+      "options": [
+        {"label": "Not Started", "value": "not_started", "displayOrder": 1, "hidden": false},
+        {"label": "In Progress", "value": "in_progress", "displayOrder": 2, "hidden": false},
+        {"label": "Completed", "value": "completed", "displayOrder": 3, "hidden": false},
+        {"label": "Blocked", "value": "blocked", "displayOrder": 4, "hidden": false}
+      ]
+    },
+    {
+      "name": "milestone_due_date",
+      "label": "Due Date",
+      "type": "date",
+      "fieldType": "date",
+      "hasUniqueValue": false,
+      "hidden": false,
+      "displayOrder": 3,
+      "description": "The due date for completing this milestone"
+    }
+  ]
+}

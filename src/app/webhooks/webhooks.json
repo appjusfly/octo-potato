@@ -1,0 +1,16 @@
+{
+  "targetUrl": "https://YOUR_BACKEND/webhooks/hubspot",
+  "maxConcurrentRequests": 10,
+  "subscriptions": [
+    {
+      "eventType": "contact.creation",
+      "active": true,
+      "propertyName": null
+    },
+    {
+      "eventType": "deal.propertyChange",
+      "active": true,
+      "propertyName": null
+    }
+  ]
+}

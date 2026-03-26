@@ -1,0 +1,25 @@
+{
+  "uid": "deeone",
+  "type": "app",
+  "config": {
+    "name": "deeone",
+    "description": "deeone HubSpot app",
+    "logo": "/app/app-logo.png",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": [
+        "https://YOUR_BACKEND/oauth/hubspot/callback"
+      ],
+      "requiredScopes": [
+        "crm.objects.contacts.read",
+        "crm.objects.deals.read"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "webhooks": {
+      "file": "/app/webhooks/webhooks.json"
+    }
+  }
+}
