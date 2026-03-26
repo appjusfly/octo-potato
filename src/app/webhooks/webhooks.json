@@ -1,0 +1,11 @@
+{
+  "webhooks": [
+    {
+      "subscriptionDetails": {
+        "subscriptionType": "contact.creation"
+      },
+      "active": true,
+      "eventUrl": "https://YOUR_BACKEND/webhooks/hubspot/contact-created"
+    }
+  ]
+}
