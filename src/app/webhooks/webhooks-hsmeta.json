@@ -12,6 +12,11 @@
           "subscriptionType": "object.creation",
           "objectType": "contact",
           "active": true
+        },
+        {
+          "subscriptionType": "object.deletion",
+          "objectType": "contact",
+          "active": true
         }
       ],
       "legacyCrmObjects": [],
