@@ -1,0 +1,28 @@
+{
+  "uid": "tests",
+  "type": "app",
+  "config": {
+    "name": "tests",
+    "description": "tests HubSpot app",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": [
+        "https://wearifully-subtentacular-jedidiah.ngrok-free.dev/oauth/callback"
+      ],
+      "requiredScopes": [
+        "oauth",
+        "crm.objects.contacts.read"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": [
+        "https://api.hubapi.com"
+      ],
+      "iframe": [],
+      "img": []
+    }
+  }
+}
