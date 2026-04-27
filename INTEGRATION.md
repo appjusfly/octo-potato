@@ -83,6 +83,7 @@ app.post('/webhook', (req, res) => {
 |---|---|
 | `contact.creation` | A new contact was created in HubSpot. Sync or process the new contact record. |
 | `contact.deletion` | A contact was deleted in HubSpot. Remove or archive the associated record in your systems. |
+| `deal.creation` | A new deal was created in HubSpot. Sync or process the new deal record. |
 | `contact.privacyDeletion` | GDPR deletion request. Delete ALL data for this contact from your systems. |
 
 ### GDPR: contact.privacyDeletion (MANDATORY)
