@@ -1,0 +1,2 @@
+- [Company Context](company_context.md) — Appnigma profile and business context
+- [User History](user_history.md) — Preferences and decisions from past sessions
