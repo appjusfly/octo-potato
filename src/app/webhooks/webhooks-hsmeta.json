@@ -19,6 +19,18 @@
           "active": true
         },
         {
+          "subscriptionType": "object.propertyChange",
+          "objectType": "contact",
+          "propertyName": "firstname",
+          "active": true
+        },
+        {
+          "subscriptionType": "object.propertyChange",
+          "objectType": "contact",
+          "propertyName": "lastname",
+          "active": true
+        },
+{
           "subscriptionType": "object.deletion",
           "objectType": "contact",
           "active": true
