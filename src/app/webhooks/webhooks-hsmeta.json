@@ -36,11 +36,6 @@
           "active": true
         },
         {
-          "subscriptionType": "object.deletion",
-          "objectType": "deal",
-          "active": true
-        },
-        {
           "subscriptionType": "object.creation",
           "objectType": "ticket",
           "active": true
