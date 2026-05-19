@@ -1,0 +1,32 @@
+{
+  "uid": "onboardv1_app",
+  "type": "app",
+  "config": {
+    "name": "OnboardV1",
+    "description": "Onboarding automations triggered by HubSpot deal events.",
+    "distribution": "private",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": ["http://localhost:3000/oauth/callback"],
+      "requiredScopes": [
+        "oauth",
+        "crm.objects.deals.read"
+      ],
+      "optionalScopes": [
+        "crm.objects.deals.write"
+      ],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": ["https://api.hubapi.com"],
+      "iframe": [],
+      "img": []
+    },
+    "support": {
+      "supportEmail": "tyler@appnigma.ai",
+      "documentationUrl": "https://example.com/docs",
+      "supportUrl": "https://example.com/support",
+      "supportPhone": "+18005555555"
+    }
+  }
+}
