@@ -1,36 +1,57 @@
-import { EmptyState, Link, Text } from '@hubspot/ui-extensions';
+import { useState } from "react";
 import {
   hubspot,
-  ExtensionPointApiActions,
-  SettingsContext,
-} from '@hubspot/ui-extensions';
+  logger,
+  Flex,
+  Heading,
+  Text,
+  Input,
+  Toggle,
+  Button,
+} from "@hubspot/ui-extensions";
 
-interface SettingsExtensionProps {
-  context: SettingsContext;
-  actions: ExtensionPointApiActions<'settings'>;
-}
+hubspot.extend<"settings">(() => <SettingsPage />);
 
-hubspot.extend<'settings'>(({ context, actions }: SettingsExtensionProps) => (
-  <SettingsPage context={context} actions={actions} />
-));
+const SettingsPage = () => {
+  const [webhookUrl, setWebhookUrl] = useState("");
+  const [flowEnabled, setFlowEnabled] = useState(true);
+  const [saved, setSaved] = useState(false);
 
-const SettingsPage = ({ context }: SettingsExtensionProps) => {
-  console.log({ context });
-
-  const docsLink =
-    'https://developers.hubspot.com/docs/apps/developer-platform/add-features/ui-extensibility/create-a-settings-component';
+  const handleSave = () => {
+    logger.debug("settings saved", { webhookUrl, flowEnabled });
+    setSaved(true);
+  };
 
   return (
-    <EmptyState
-      title="OnboardV1 settings"
-      layout="horizontal"
-      imageName="building"
-    >
+    <Flex direction="column" gap="medium">
+      <Heading>OnboardV1 Settings</Heading>
       <Text>
-        Configure the onboarding flow that runs when a new deal is created. See
-        the <Link href={docsLink}>app settings docs</Link> for guidance on what
-        you can put here.
+        Configure how OnboardV1 handles new deal events. Enter your backend
+        webhook URL to receive notifications, and enable or disable the
+        onboarding flow below.
       </Text>
-    </EmptyState>
+      <Input
+        label="Webhook URL"
+        name="webhookUrl"
+        value={webhookUrl}
+        placeholder="https://your-backend.com/webhook"
+        onChange={(val) => {
+          setWebhookUrl(val);
+          setSaved(false);
+        }}
+      />
+      <Toggle
+        label="Enable onboarding flow"
+        name="flowEnabled"
+        checked={flowEnabled}
+        onChange={(val) => {
+          setFlowEnabled(val);
+          setSaved(false);
+        }}
+      />
+      <Button onClick={handleSave} variant="primary">
+        {saved ? "Saved" : "Save Settings"}
+      </Button>
+    </Flex>
   );
 };
