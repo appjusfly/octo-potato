@@ -1,0 +1,11 @@
+{
+  "uid": "deal-overview-card",
+  "type": "card",
+  "config": {
+    "name": "Deal Overview",
+    "description": "Displays key deal data on the deal record page",
+    "location": "crm.record.tab",
+    "entrypoint": "/app/cards/DealOverview.jsx",
+    "objectTypes": ["deals"]
+  }
+}
