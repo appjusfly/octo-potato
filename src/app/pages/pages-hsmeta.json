@@ -2,7 +2,7 @@
   "uid": "onboardv1-home-page",
   "type": "page",
   "config": {
-    "entrypoint": "/app/pages/Home.tsx",
+    "entrypoint": "/app/pages/Pages.tsx",
     "location": "home"
   }
 }
